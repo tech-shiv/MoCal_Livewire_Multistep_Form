@@ -178,6 +178,11 @@
                         </div>
                     @endif
                 </div>
+                @if (session()->has('success_message'))
+                    <div class="alert alert-success text-center">
+                        {{ session('success_message') }}
+                    </div>
+                @endif
             </form>
         </div>
 

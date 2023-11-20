@@ -388,6 +388,9 @@ class Register extends Component
 
     public function signUp()
     {
+        // show a success message to the user after saving the data
+        session()->flash('success_message', 'Form submitted successfully!');
+        $this->reset();
         $this->currentStep = 1;
     }
 }
